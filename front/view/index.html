@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess My Number!</title>
+  </head>
+  <body>
+    <header>
+      <h1>Guess My Number!</h1>
+      <p class="between">(Between 1 and 20)</p>
+      <button class="btn again" onclick="againButton()" >Again!</button>
+      <div class="number" id="result-if-won">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <input type="number" id="guessed-number" class="guess" />
+        <button class="btn check" id="btn-check" onclick="getGuessedNumber()" >Check!</button>
+      </section>
+      <section class="right">
+        <p class="message" id="result-message" >Start guessing...</p>
+        <p class="label-score" >💯 Score: <span class="score" id="user-score" >20</span></p>
+        <p class="label-highscore">
+          🥇 Highscore: <span class="highscore"id="highscore" >0</span>
+        </p>
+      </section>
+    </main>
+    <script src="../controller/guessGame.controller.js"></script>
+    <script src="../model/guessedNumberValidation.model.js"></script>
+    <script src="../model/numberGenerator.model.js"></script>
+  </body>
+</html>
